@@ -1,0 +1,33 @@
+.PHONY: dotests dotests-help dotests-command clean
+
+TEST_FILES[] =
+    WordTranslator.py
+    Tests/DuplicatableWords.list
+    Tests/ReplacingWords.yaml
+    Tests/SourceWords.list
+    Tests/Tests.py
+    Tests/UntranslationWords.list
+
+dotests: $(TEST_FILES)
+    section
+        setenv(PYTHONPATH, ".;$(PYTHONPATH)")
+        python Tests/Tests.py
+
+dotests-help: $(TEST_FILES)
+    section
+        setenv(PYTHONPATH, ".;$(PYTHONPATH)")
+        python WordTranslator.py --help
+
+dotests-command: $(TEST_FILES)
+    section
+        setenv(PYTHONPATH, ".;$(PYTHONPATH)")
+        python WordTranslator.py \
+            --source_words Tests/SourceWords.list \
+            --replace_words Tests/ReplacingWords.yaml \
+            --ignore_duplication Tests/DuplicatableWords.list \
+            --ignore_untranslation Tests/UntranslationWords.list \
+            --encoding utf-8
+
+clean:
+    rm $(find -name $"*.omc")
+    rm  -r __pycache__
