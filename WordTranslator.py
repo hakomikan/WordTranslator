@@ -1,3 +1,5 @@
+import codecs
+
 def MaxLengthWord(wordList):
     """
     >>> MaxLengthWord(["aaa","bbbbb"])
@@ -42,9 +44,9 @@ def FindDuplication(dct):
         ret[v] = ret.get(v,[]) + [k]
     for k in [ x for x in ret.keys() ]:
         if len(ret[k]) <= 1:
-        	del ret[k]
+            del ret[k]
         else:
-        	ret[k].sort()
+            ret[k].sort()
     return ret
 
 def TranslateWords(
@@ -63,7 +65,7 @@ def TranslateWords(
     for src in sourceWords:
         translatedWords[src], currentUntranslatedWords = ReplaceWord(src, replaceWords)
         if currentUntranslatedWords:
-            untranslatedWords.append(*currentUntranslatedWords)
+            untranslatedWords.append(currentUntranslatedWords)
 
     duplicatedWords = FindDuplication(translatedWords)
     duplicatedWords = dict( (k,v) for k,v in duplicatedWords.items() if k not in duplicatableWords )
@@ -87,13 +89,13 @@ def OpenOutputStream(filename):
         return sys.stdout
     else:
         print(filename)
-        return open(filename, "w")
+        return codecs.open(filename, "w", Encoding)
 
 def OpenInputStream(filename):
     if filename == "-":
         return sys.stdin
     else:
-        return open(filename, "r")
+        return codecs.open(filename, "r", Encoding)
 
 def ReadYaml(filename):
     with OpenInputStream(filename) as f:
