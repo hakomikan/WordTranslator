@@ -65,12 +65,12 @@ def TranslateWords(
     for src in sourceWords:
         translatedWords[src], currentUntranslatedWords = ReplaceWord(src, replaceWords)
         if currentUntranslatedWords:
-            untranslatedWords.append(currentUntranslatedWords)
+            untranslatedWords.append((currentUntranslatedWords, src))
 
     duplicatedWords = FindDuplication(translatedWords)
     duplicatedWords = dict( (k,v) for k,v in duplicatedWords.items() if k not in duplicatableWords )
 
-    untranslatedWords = [ x for x in untranslatedWords if x not in untranslationWords ]
+    untranslatedWords = [ x for x in untranslatedWords if x[0] not in untranslationWords ]
 
     return (translatedWords,
             duplicatedWords,
@@ -130,6 +130,8 @@ def main(source_words = "-",
 
     global Encoding
     Encoding = encoding
+
+    sys.stdout = codecs.getwriter(Encoding)(sys.stdout.detach())
 
     sourceWords = ReadList(source_words)
     replaceWords = ReadYaml(replace_words)
