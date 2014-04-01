@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="939e733e-dbe5-4870-beb7-8827a4358444" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WordTranslator.py" afterPath="$PROJECT_DIR$/WordTranslator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WordTranslator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +29,7 @@
       <file leaf-file-name="WordTranslator.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WordTranslator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="0" selection-start="4278" selection-end="4278" vertical-scroll-proportion="0.93971634" vertical-offset="2003" max-vertical-offset="2686">
+            <state line="23" column="0" selection-start="638" selection-end="638" vertical-scroll-proportion="0.6672355" vertical-offset="0" max-vertical-offset="2720">
               <folding />
             </state>
           </provider>
@@ -52,8 +53,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="70" />
-    <option name="y" value="44" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
@@ -119,7 +120,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="44" width="1382" height="754" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -160,6 +161,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WordTranslator.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="0" selection-start="4278" selection-end="4278" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2686">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WordTranslator.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="0" selection-start="2679" selection-end="2679" vertical-scroll-proportion="0.0" vertical-offset="1369" max-vertical-offset="2686">
           <folding />
         </state>
@@ -167,7 +175,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WordTranslator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="0" selection-start="4278" selection-end="4278" vertical-scroll-proportion="0.93971634" vertical-offset="2003" max-vertical-offset="2686">
+        <state line="23" column="0" selection-start="638" selection-end="638" vertical-scroll-proportion="0.6672355" vertical-offset="0" max-vertical-offset="2720">
           <folding />
         </state>
       </provider>
